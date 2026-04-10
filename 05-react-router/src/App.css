@@ -1,0 +1,29 @@
+.navbar {
+  background-color: #7aaace;
+
+  & .container {
+    display: flex;
+    gap: 20px;
+    & a {
+      padding: 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: x-large;
+    }
+
+    & a:hover {
+      background-color: #9cd5ff;
+    }
+  }
+}
+
+.containerApp {
+  min-height: 90dvh;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

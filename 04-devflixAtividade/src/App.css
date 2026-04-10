@@ -1,0 +1,230 @@
+:root {
+  /* :root -> variáveis de css no tema original projetado */
+  --font-raleway: "Raleway", sans-serif;
+  --search-magnifier-size: 4em;
+}
+
+/* Light theme */
+.light {
+  --bg-primary: #f1f1f1;
+  --bg-secondary: #ffffff;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --text-placeholder: #a1a1a1;
+  --accent-color: #b71aff;
+  --shadow-color: rgba(230, 0, 0, 0.1);
+  --shadow: 0px 2px 8px var(--shadow-color);
+}
+
+/* Dark theme */
+.dark {
+  --bg-primary: #202020;
+  --bg-secondary: #2a2a2a;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --text-placeholder: #a1a1a1;
+  --accent-color: #8f05ff;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+}
+
+body {
+  font-family: var(--font-raleway);
+  margin: 0;
+  padding: 0;
+}
+
+#App {
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+
+  /* Efeito de transição */
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Botão de alternância de tema */
+.theme-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.language-picker {
+  position: fixed;
+  top: 2rem;
+  right: 5.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 999px;
+  padding: 0.4rem 0.7rem;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+
+.language-picker span {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.language-picker select {
+  border: 1px solid var(--text-placeholder);
+  border-radius: 999px;
+  background: #ffffff;
+  color: #000000;
+  padding: 0.2rem 0.5rem;
+  outline: none;
+  cursor: pointer;
+}
+
+#Logo {
+  max-width: 70%;
+  overflow: hidden;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.search {
+  width: 70%;
+  margin: 4rem 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1.75rem;
+  border-radius: 4rem;
+  background: #7c00b6;
+  box-shadow: var(--shadow);
+
+  -webkit-box-shadow: var(--shadow);
+
+  transition: all 0.3s ease;
+
+  & input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding-right: 1rem;
+    color: var(--text-primary);
+    background: #7c00b6;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    & input::placeholder {
+      color: var(--text-placeholder);
+    }
+
+    & img {
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+    }
+  }
+
+  .search-magnifier {
+    width: var(--search-magnifier-size);
+    height: var(--search-magnifier-size);
+    border: 1px solid var(--text-placeholder);
+    border-radius: 999px;
+    background: #ffffff;
+    color: #000000;
+    padding: 0.2rem 0.5rem;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.empty {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+
+  color: var(--accent-color);
+}
+
+.container {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+  #App {
+    padding: 4rem 2rem;
+  }
+
+  .language-picker {
+    top: 1.3rem;
+    right: 4.6rem;
+    padding: 0.35rem 0.55rem;
+  }
+
+  .search {
+    padding: 1rem 1.75rem;
+    width: 100%;
+  }
+
+  & input {
+    font-size: 1.1rem;
+  }
+
+  & img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #App {
+    padding: 4rem 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    margin-top: 2rem;
+  }
+
+  .movie {
+    width: 100%;
+    margin: 1rem;
+  }
+}

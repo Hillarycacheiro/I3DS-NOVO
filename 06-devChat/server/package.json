@@ -1,0 +1,19 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "Servidor de teste para projeto chamado devChat",
+    "main": "index.js",
+    "Scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+    },
+  "author": "Hillary Cacheiro",
+  "license": "ISC",
+  "dependencies": {            
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "3.0.1"
+  }
+}
