@@ -4,6 +4,8 @@ import style from "./Join.module.css";
 import { Input, Button } from "@mui/material";
 import io from "socket.io-client";
 
+import logo from "../../assets/devChat.png";
+
 const Join = (props) => {
   const usernameRef = useRef();
 
@@ -17,7 +19,7 @@ const Join = (props) => {
     props.setSocket(socket);
     props.setChatVisibility(true);
   };
-
+  
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       handleSubmit();
@@ -26,7 +28,7 @@ const Join = (props) => {
   return (
     <>
       <div className={style.dev_logo}>
-        <img src="" alt="Logo do DevChat" />
+        <img src={logo} alt="Logo do DevChat" />
       </div>
 
       <div className={style.join_container}>
