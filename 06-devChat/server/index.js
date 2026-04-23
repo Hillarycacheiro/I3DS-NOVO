@@ -12,7 +12,7 @@ const io = require("socket.io")(server, {
   // Importa Socket.io e configura para o servidor HTTP
   // CORS (Cross-Origin Resource Sharing): permite que clientes de outros domínios/IPs se conectem
   // Altere o IP para o IP da máquina onde o servidor está rodando
-  cors: { origin: "http://localhost:5173" },
+  cors: { origin: "*" },
   // Exemplo: "http://localhost:5173" para desenvolvimento local
   // Exemplo: "http://seu.ip.aqui:5173" para rede
 });
