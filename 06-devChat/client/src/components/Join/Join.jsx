@@ -14,6 +14,7 @@ const Join = (props) => {
     const socket = io.connect("http://localhost:3001");
     socket.emit("set_username", username);
 
+    props.setSocket(socket);
     props.setChatVisibility(true);
   };
 
