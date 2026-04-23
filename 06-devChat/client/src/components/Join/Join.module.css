@@ -1,0 +1,39 @@
+.dev_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10em;
+  padding-bottom: 4em;
+
+  & img {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.join_container {
+  background-color: #fff;
+  color: #000;
+  width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+
+  -webkit-box-shadow: 5px 5px 17px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 17px 1px rgba(0, 0, 0, 0.3);
+
+  & Input {
+    text-align: center;
+  }
+
+  & Button {
+    background: #129d93;
+    font-weight: bolder;
+  }
+
+  & Button:hover {
+    background: #0f837b;
+  }
+}
