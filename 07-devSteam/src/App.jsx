@@ -6,22 +6,22 @@ function App() {
   const promoGames = [
     {
       id: 1,
-      title: "League of Legends",
-      image: "/lol.jpg",
+      title: "Roblox",
+      image: "/src/assets/RobloxLogo.webp",
       price: "R$99,90",
     },
 
     {
       id: 2,
-      title: "Dota 2",
-      image: "/dota.jpg",
+      title: "The Sims",
+      image: "/src/assets/TheSimsLogo.webp",
       price: "R$99,90",
     },
 
     {
       id: 3,
-      title: "Valorant",
-      image: "/valorant.jpg",
+      title: "Hogwarts",
+      image: "/src/assets/Hogwarts_Legacy_capa.jpeg",
       price: "R$99,90",
     },
   ];
@@ -29,17 +29,17 @@ function App() {
   const otherGames = [
     {
       id: 4,
-      title: "Counter Strike",
-      category: "Ação, Estratégia",
-      image: "/cs.jpg",
-      price: "R$99,90",
+      title: "GTA 5",
+      category: "RPG, Mundo Aberto",
+      image: "/src/assets/GTALogo.jpg",
+      price: "R$149,90",
     },
 
     {
       id: 5,
-      title: "Cyberpunk",
+      title: "GTA 5",
       category: "RPG, Mundo Aberto",
-      image: "/cyberpunk.jpg",
+      image: "/src/assets/GTALogo.jpg",
       price: "R$149,90",
     },
   ];
